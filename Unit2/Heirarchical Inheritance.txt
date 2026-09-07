@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle
+{
+public:
+    void start()
+    {
+        cout << "Vehicle started" << endl;
+    }
+};
+
+class Car : public Vehicle
+{
+public:
+    void openBoot()
+    {
+        cout << "Car boot opened" << endl;
+    }
+};
+
+class Bike : public Vehicle
+{
+public:
+    void helmet()
+    {
+        cout << "Wear helmet" << endl;
+    }
+};
+
+int main()
+{
+    Car c;
+    Bike b;
+
+    c.start();
+    c.openBoot();
+
+    b.start();
+    b.helmet();
+
+    return 0;
+}
